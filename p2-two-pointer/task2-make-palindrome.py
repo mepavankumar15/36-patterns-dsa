@@ -33,10 +33,24 @@
 │ When done → new chat → REVIEW MODE       │
 └──────────────────────────────────────────┘"""
 
-s1 = input("enter the string : ")
-s= s1.lower()
+s = input("enter the string : ")
 
+
+#helper function
+def isPalindrome(s,l ,r):
+
+    while l < r : 
+
+        if s[l] != s[r] :
+            return False
+        l+=1
+        r-=1
+    return True
+
+#main function 
 def valid_palindrome_skip_char(s) :
+
+    s= s.lower()
 
     l = 0
     r = len(s)-1
@@ -48,15 +62,5 @@ def valid_palindrome_skip_char(s) :
         r-=1
     return True
 
-
-def isPalindrome(s,l ,r):
-
-    while l < r : 
-
-        if s[l] != s[r] :
-            return False
-        l+=1
-        r-=1
-    return True
 
 print(valid_palindrome_skip_char(s))
