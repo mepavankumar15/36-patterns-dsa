@@ -10,7 +10,7 @@ def string_hashmap_template(s):
     # STEP 2: Scan the string, count each character
     for char in s:
         # If char exists, add 1. If not, start at 0 then add 1.
-        freq[char] = freq.get(char, 0) + 1
+        freq[char] = freq.get(char, 0) + 1 #-> used everytime
 
     # STEP 3: Use the map to answer your question
     # (this part changes per problem)
